@@ -1,0 +1,71 @@
+{
+    "sourceType": "MYSQL_LEGACY",
+    "metadataRefresh": {
+        "datasetDiscovery": true
+    },
+    "form": {
+        "tabs": [
+            {
+                "name": "General",
+                "isGeneral": true,
+                "sections": [
+                    {
+                        "name": "Connection",
+                        "layout": "row",
+                        "elements": [
+                            {
+                                "propName": "config.host",
+                                "validate": {
+                                    "isRequired": true
+                                }
+                            },
+                            {
+                                "propName": "config.port",
+                                "size": "third",
+                                "validate": {
+                                    "isRequired": true
+                                }
+                            },
+                            {
+                                "propName": "config.database"
+                            },
+                            {
+                                "propName": "config.username",
+                                "validate": {
+                                    "isRequired": true
+                                }
+                            },
+                            {
+                                "propName": "config.password",
+                                "validate": {
+                                    "isRequired": true
+                                }
+                            },
+                            {
+                                "propName": "config.useSsl"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Advanced Options",
+                "sections": [
+                    {
+                        "elements": [
+                            {
+                                "propName": "config.extraParams",
+                                "size": "full",
+                                "tooltip": "Additional JDBC connection parameters",
+                                "help": {
+                                    "position": "bottom",
+                                    "text": "Enter extra JDBC parameters in the format: param1=value1&param2=value2"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
